@@ -21,26 +21,26 @@
 
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
 }
 
-#pp::after {
-    content: 'pp';
+#pp {
     font-weight: 700;
 }
 
-.hundred-count, .fifty-count, .zero-count {
-    padding: 5px;
+#pp::after {
+    content: ' pp';
+    font-weight: 400;
 }
 
-.hundred-count {
+#hundred-count {
     color: var(--hundred-bg);
 }
 
-.fifty-count {
+#fifty-count {
     color: var(--fifty-bg);
 }
 
-.zero-count {
+#miss-count {
     color: var(--miss-bg);
 }
