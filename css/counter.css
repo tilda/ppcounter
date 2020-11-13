@@ -1,20 +1,46 @@
 :root {
     /* SETTINGS */
-    --bg-color: #3c3e3e;
-    --counter-height: 500px;
-    --counter-width: 100px;
-    /* TODO: 100, 50 */
+    --bg-color: #031926;
+    --text-color: #0094c6;
+    --hundred-bg: #40f99b;
+    --fifty-bg: #f7d488;
     --miss-bg: #ba5267;
+    --counter-height: 80px;
+    --counter-width: 400px;
 }
 
 .counter {
-    /* Change these values in :root */
+    /* DO NOT TOUCH */
     background-color: var(--bg-color);
     height: var(--counter-height);
     width: var(--counter-width);
-    /* DO NOT TOUCH */
+
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
 
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+}
+
+#pp::after {
+    content: 'pp';
+    font-weight: 700;
+}
+
+.hundred-count, .fifty-count, .zero-count {
+    padding: 5px;
+}
+
+.hundred-count {
+    color: var(--hundred-bg);
+}
+
+.fifty-count {
+    color: var(--fifty-bg);
+}
+
+.zero-count {
+    color: var(--miss-bg);
 }
