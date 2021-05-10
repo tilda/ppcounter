@@ -30,7 +30,7 @@
 }
 
 #pp::after {
-    content: ' pp';
+    content: 'pp';
     font-weight: 400;
 }
 
