@@ -15,7 +15,10 @@ socket.onerror = error => console.log('wtf just happened:', error)
 socket.onmessage = event => {
     try {
         let data = JSON.parse(event.data), menu = data.menu, play = data.gameplay
-        if (menu.state === 2) {
+        // 2 = playing, 7 = results, 14 = MP results
+        // TODO: find a better way to do this I HATE THIS SO MUCH
+        // also apparently || didn't work for some reason so i had to use |
+        if (menu.state === 2 | menu.state === 7 | menu.state === 14) {
             counter.classList.remove('animated-out')
             counter.classList.add('animated-in')
             pp.innerHTML = play.pp.current
