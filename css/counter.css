@@ -1,16 +1,19 @@
 :root {
     /* SETTINGS */
-    --bg-color: #031926;   /* Default: #031926 */
-    --text-color: #0094c6; /* Default: #0094c6 */
-    --hundred-bg: #40f99b; /* Default: #40f99b */
-    --fifty-bg: #f7d488;   /* Default: #f7d488 */
-    --miss-bg: #ba5267;    /* Default: #ba5267 */
-    --counter-height: 80px;  /* Default: 80px    */
-    --counter-width: 400px;  /* Default: 400px   */
-    --font-family: 'Inter';  /* Default: 'Inter' */
+    --bg-color: #031926;                /* Default: #031926       */
+    --text-color: #0094c6;              /* Default: #0094c6       */
+    --hundred-bg: #40f99b;              /* Default: #40f99b       */
+    --fifty-bg: #f7d488;                /* Default: #f7d488       */
+    --miss-bg: #ba5267;                 /* Default: #ba5267       */
+    --counter-height: 80px;               /* Default: 80px          */
+    --counter-width: 400px;               /* Default: 400px         */
+    --font-family: 'Inter';               /* Default: 'Inter'       */
+    --animate-in: slideInDown;            /* Default: slideInDown   */
+    --animate-out: slideOutUp;            /* Default: slideOutUp    */
+    --animate-duration: 1s !important;    /* Default: 1s (1 second) */
 }
 
-.counter {
+#counter {
     /* DO NOT TOUCH */
     background-color: var(--bg-color);
     height: var(--counter-height);
@@ -44,4 +47,18 @@
 
 #miss-count {
     color: var(--miss-bg);
+}
+
+.animated {
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+    animation-delay: 0s;
+}
+
+.animated-in {
+    animation-name: var(--animate-in);
+}
+
+.animated-out {
+    animation-name: var(--animate-out);
 }
